@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title> Book Library </title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">    
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+</head>
+<body>
+  <div class = "wrapper">
+    
+    <h1>Book Library</h1>
+
+    <div class="content">
+
+        <form id="add-book-form">
+          <input type="text" name="title" placeholder="Title">
+          <input type="text" name="author" placeholder="Author">
+          <input type="number" name="pages" placeholder="Pages">
+          <label>Read
+            <input type="checkbox" name="read" >
+          </label>
+          <button>Add Book</button>
+        </form>
+        <ul id="book-list"></ul>
+
+    </div>
+  </div>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyCn_q9GCnOBTbQlk1pmlKh-4fV74D6ZqPI",
+    authDomain: "library-e4c9c.firebaseapp.com",
+    projectId: "library-e4c9c",
+    storageBucket: "library-e4c9c.appspot.com",
+    messagingSenderId: "604162653511",
+    appId: "1:604162653511:web:90a497ae68262f68afe062",
+    measurementId: "G-89ZYZ90GNZ"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  
+  const db = firebase.firestore();
+  db.settings({timestampsInSnapshots: true});
+</script>
+
+<script src="script.js"></script>
+</body>
+</html>
