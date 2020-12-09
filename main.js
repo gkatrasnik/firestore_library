@@ -1,6 +1,24 @@
 const bookList = document.querySelector("#book-list");
 const form = document.querySelector("#add-book-form");
 
+const mainApp = (() => {
+var uid = null;
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      // User is signed in.
+      uid = user.uid;
+    } else {
+      window.location.replace("login.html");
+    }
+  });
+
+  function logOut() {
+    firebase.auth().signOut();
+  }
+
+return {logOut}
+})();
+
 //create element and render book
 function renderBook(doc){
     let li = document.createElement("li");
@@ -42,13 +60,6 @@ cross.addEventListener("click", (e) => {
   console.log(id)
 })
 }
-
-//get data from firestore, dont need becouse of realtime listener
-/*db.collection("books").get().then((snapshot) => {
-  snapshot.docs.forEach(doc => {
-    renderBook(doc);
-  });
-})*/
 
 //saving data to firestore
 form.addEventListener("submit", (e) => {
