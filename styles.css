@@ -19,14 +19,14 @@ button {
     font-weight: 500;
 }
 
+
 .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.deleteCross {
-    
+    width: 80%;
+    margin:auto;
+    position: relative;
 }
 
 
@@ -40,6 +40,12 @@ padding: 5px;
     font-weight: 600;
 }
 
-.logoutButton {
+.toprightButtonDiv {
     position:absolute; top:3%; right:3%;
+    display: flex;
+    flex-direction: column;
+}
+
+#signedInAs {
+    font-size: small;
 }

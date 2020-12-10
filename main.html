@@ -15,9 +15,13 @@
 </head>
 <body>
   <div class = "wrapper">
-    <button class="logoutButton" onclick="mainApp.logOut()">Log Out</button>
-    
+    <div class = "toprightButtonDiv">
+      <button onclick="logOut()">Log Out</button>
+      
+    </div>
+
     <h1>Book Library</h1>
+    <p id ="signedInAs"></p>
 
     <div class="content">
 
@@ -25,8 +29,8 @@
           <input type="text" name="title" placeholder="Title">
           <input type="text" name="author" placeholder="Author">
           <input type="number" name="pages" placeholder="Pages">
-          <label>Read
-            <input type="checkbox" name="read" >
+          <label >Read
+            <input type="checkbox" name="read">
           </label>
           <button>Add Book</button>
         </form>
