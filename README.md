@@ -1,6 +1,6 @@
 
 # Library
-odin project library
+odin project library\
 https://gkatrasnik.github.io/firestore_library/main.html
 
 # firestore_library
