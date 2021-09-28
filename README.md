@@ -1,7 +1,13 @@
-<<<<<<< HEAD
+
 # Library
 odin project library
-=======
+https://gkatrasnik.github.io/firestore_library/main.html
+
 # firestore_library
-Created new book library with firestore database
->>>>>>> ad63d3da2e766b3aa3448594cf64d5a8248c0aba
+
+User must sign up.\
+Authentication is made with firebase Auth.\
+User can add and delete books.\
+User can check if book is read or not.\
+Data is stored on Firestore.\
+
